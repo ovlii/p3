@@ -32,15 +32,15 @@
 			<table>
 				<tr>
 					<th>Name:</th>
-					<? if ( Input::get('address') == 1) { ?>
+					<?php if ( Input::get('address') == 1) { ?>
 					<th>Address:</th>
-					<? } ?>
-					<? if ( Input::get('birthdate') == 1) { ?>
+					<?php } ?>
+					<?php if ( Input::get('birthdate') == 1) { ?>
 						<th>DOB:</th>
-					<? } ?>
-					<? if ( Input::get('profile') == 1) { ?>
+					<?php } ?>
+					<?php if ( Input::get('profile') == 1) { ?>
 						<th>Profile:</th>
-					<? } ?>
+					<?php } ?>
 				 </tr>
 					@foreach ($results as $result) 
 					<tr>
