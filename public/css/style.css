@@ -236,6 +236,17 @@ ul#menu li a:hover
   padding: 0 0 4px 25px;
   line-height: 1.5em;}
 
+#password {
+  text-align:center;
+  font-size:1.5rem;
+  margin-bottom:10px;
+  color:#f39c12;
+  font-family:consolas,courier;
+  background-color:#eee;
+  display:inline-block;
+  padding:15px;
+}
+
 #footer
 { position:fixed;
   width: 100%;

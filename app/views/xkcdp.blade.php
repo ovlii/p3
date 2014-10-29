@@ -58,9 +58,10 @@
      	@if (isset($result_password))
 		<br/>
 		<hr/>
-		<h3>
+		<br/>
+		<div id="password">
 		  {{ $result_password }}
-		</h3>
+		</div>
      	@endif
 		
 	  </div>

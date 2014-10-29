@@ -17,6 +17,11 @@
 		
         <h2>Random Users Generator</h2>
         <p>Create random user data for your applications. Like Lorem Ipsum, but for people.</p>      
+
+        <h2>xkcd Password Generator</h2>
+        <p>Continuing from Project 2, generating xkcd style passwords. The same logic has been used to generate the password but this time using 		   Laravel Framework</p>      
+
+
       </div>
     </div> 
 @stop
