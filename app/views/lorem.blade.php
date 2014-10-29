@@ -11,6 +11,7 @@
         <!-- insert the page content here -->
 		<h2>Lorem Ipsum Generator</h2>
 		
+		<p>How many paragrahs do you want to generate?</p>
 		{{ Form::open() }}
 		{{ Form::text('num_paragraphs', '', array('size' => '10', 'maxlength' => '2'))  }}
 		{{ Form::submit('Generate Text!') }}
