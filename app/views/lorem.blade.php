@@ -18,10 +18,9 @@
 		
      	@if (isset($paragraphs))
 		<br/>
-		<hr>
+		<hr/>
 		  <p>{{implode('<p>', $paragraphs )}}</p>
      	@endif
-		</hr>
 	  </div>
     </div>
 @stop

@@ -28,7 +28,7 @@
      	@if (isset($results))
 		
 		<br/>
-		<hr>
+		<hr/>
 			<table>
 				<tr>
 					<th>Name:</th>
