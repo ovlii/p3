@@ -93,26 +93,27 @@ Route::post('xkcdp',function() {
 	$make_upper = Input::get('make_upper');
 	
 	$result_password = '';
+	
+	    $faker = Faker\Factory::create();	
+		for ( $i = 0 ; $i < $words ; $i++ ) {
 		
-    $faker = Faker\Factory::create();	
-	for ( $i = 0 ; $i < $words ; $i++ ) {
-		
-		$result_password = ( $result_password == '' ? $faker->word: 
-												   $result_password . $separator . $faker->word);				
+			$result_password = ( $result_password == '' ? $faker->word: 
+													   $result_password . $separator . $faker->word);				
 
-	}
-	if ($random == 1 ) {
-		$result_password .= rand(0,9);  
-	}
+		}
+		if ($random == 1 ) {
+			$result_password .= rand(0,9);  
+		}
 	
-	if ($special_chars == 1) {
-		$result_password .= chr(rand(33,47));
-	}
+		if ($special_chars == 1) {
+			$result_password .= chr(rand(33,47));
+		}
 	
-	if ($make_upper == 1) {
-		$result_password = strtoupper($result_password);
-	}
+		if ($make_upper == 1) {
+			$result_password = strtoupper($result_password);
+		}
 	
-	return View::make('xkcdp')->with('result_password',$result_password);
-	
+		return View::make('xkcdp')->with('result_password',$result_password);
+		
+		
 });
