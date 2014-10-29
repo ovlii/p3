@@ -100,7 +100,7 @@ ol li
 
 #header
 { background: #323534 repeat-x;
-  height: 177px;}
+  height: 140px;}
   
 #banner
 {  background: transparent no-repeat;
@@ -145,7 +145,7 @@ ol li
 
 #menubar
 { width: 880px;
-  height: 46px;} 
+  height: 5px;} 
 
 ul#menu
 { float: right;
@@ -237,7 +237,8 @@ ul#menu li a:hover
   line-height: 1.5em;}
 
 #footer
-{ width: 100%;
+{ position:fixed;
+  width: 100%;
   font-family: 'trebuchet ms', sans-serif;
   font-size: 100%;
   bottom: 0;
