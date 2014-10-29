@@ -17,14 +17,14 @@
 		<br/><br/>
 		<h3>Include...</h3>		
 		<br/>
-		{{ Form::checkbox('birthdate')}}
 		{{ Form::label('birthdate', '', array('id' => 'birthdate'))  }}
+		{{ Form::checkbox('birthdate')}}
 		<br/>
-		{{ Form::checkbox('address') }}
 		{{ Form::label('address', '', array('id' => 'address'))  }}
+		{{ Form::checkbox('address') }}
 		<br/>
-		{{ Form::checkbox('profile')  }}
 		{{ Form::label('profile', '', array('id' => 'profile'))  }}
+		{{ Form::checkbox('profile')  }}
 		<br/><br/>
 				
 		{{ Form::submit('Generate Users!') }}
