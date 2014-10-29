@@ -15,7 +15,7 @@
 		{{ Form::text('num_paragraphs', '', array('size' => '10', 'maxlength' => '2'))  }}
 		{{ Form::submit('Generate Text!') }}
 		{{ Form::close() }}
-	
+		
      	@if (isset($paragraphs))
 		<br/>
 		<hr>

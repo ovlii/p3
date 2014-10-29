@@ -8,7 +8,8 @@ html
 body
 { font: normal .80em 'trebuchet ms', arial, sans-serif;
   background: #FFF;
-  color: #555;}
+  color: #555;
+}
 
 p
 { padding: 0 0 20px 0;
@@ -222,7 +223,7 @@ ul#menu li a:hover
 #content
 { text-align: left;
   width: 950px;
-  padding: 0 0 0 5px;
+  padding-bottom:50px;
   float: left;}
   
 #content ul
@@ -240,7 +241,7 @@ ul#menu li a:hover
   font-family: 'trebuchet ms', sans-serif;
   font-size: 100%;
   bottom: 0;
-  height: 80px;
+  height: 50px;
   padding: 28px 0 5px 0;
   text-align: center; 
   background: #3B3939 repeat-x;

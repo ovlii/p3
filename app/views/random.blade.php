@@ -15,12 +15,12 @@
 		{{ Form::label('num_users', 'How many Users: '), Form::text('num_users', '', array('size' => '3', 'maxlength' => '2'))  }}
 		(Max: 99)
 		<br/><br/>
-		<h3>Include...</h3>
-		{{ Form::label('birthdate', 'Birthdate: '), Form::checkbox('birthdate') }}
+		<h3>Include...</h3>		
+		{{ Form::checkbox('birthdate'),Form::label('birthdate', ' Birthdate ') }}
 		<br/>
-		{{ Form::label('address', 'Address: '), Form::checkbox('address')  }}
+		{{ Form::checkbox('address') ,Form::label('address', ' Address ') }}
 		<br/>
-		{{ Form::label('profile', 'Profile: '), Form::checkbox('profile')  }}
+		{{ Form::checkbox('profile') ,Form::label('profile', ' Profile ') }}
 		<br/><br/>
 		{{ Form::submit('Generate Users!') }}
 		{{ Form::close() }}
@@ -32,15 +32,15 @@
 			<table>
 				<tr>
 					<th>Name:</th>
-					<? if ( Input::get('address') == 1) { ?>
+					<?php if ( Input::get('address') == 1) { ?>
 					<th>Address:</th>
-					<? } ?>
-					<? if ( Input::get('birthdate') == 1) { ?>
+					<?php } ?>
+					<?php if ( Input::get('birthdate') == 1) { ?>
 						<th>DOB:</th>
-					<? } ?>
-					<? if ( Input::get('profile') == 1) { ?>
+					<?php } ?>
+					<?php if ( Input::get('profile') == 1) { ?>
 						<th>Profile:</th>
-					<? } ?>
+					<?php } ?>
 				 </tr>
 					@foreach ($results as $result) 
 					<tr>
@@ -57,5 +57,4 @@
 	  </div>
     </div>
 @stop
-
 @include('includes/footer')
