@@ -17,13 +17,13 @@
 		<br/><br/>
 		<h3>Include...</h3>		
 		<br/>
-		{{ Form::label('birthdate', '', array('id' => 'birthdate'))  }}
+		{{ Form::label('birthdate')  }}
 		{{ Form::checkbox('birthdate')}}
 		<br/>
-		{{ Form::label('address', '', array('id' => 'address'))  }}
+		{{ Form::label('address')  }}
 		{{ Form::checkbox('address') }}
 		<br/>
-		{{ Form::label('profile', '', array('id' => 'profile'))  }}
+		{{ Form::label('profile'))  }}
 		{{ Form::checkbox('profile')  }}
 		<br/><br/>
 				
