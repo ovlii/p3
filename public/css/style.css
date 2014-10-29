@@ -15,6 +15,10 @@ p
 { padding: 0 0 20px 0;
   line-height: 1.7em;}
 
+#error {
+	color: red;
+}
+ 
 img
 { border: 0;}
 

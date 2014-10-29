@@ -12,9 +12,10 @@
 		<h2>Random User's Generator</h2>
 		
 		{{ Form::open() }}
-		{{ Form::label('num_users', 'How many Users?: '), Form::text('num_users', '', array('size' => '3', 'maxlength' => '2'))  }}
+		{{ Form::label('num_users', 'How many Users?: '), Form::text('num_users', '5', array('size' => '3', 'maxlength' => '2'))  }}
 		(Max: 99)
-		<br/><br/>
+		@if ($errors->has('num_users')) <div id="error"> * {{ $errors->first('num_users') }} * </div>@endif
+		<br/>
 		<h3>Include...</h3>		
 		<table>
 			<tr>

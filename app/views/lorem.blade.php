@@ -13,8 +13,9 @@
 		
 		<p>How many paragrahs do you want to generate?</p>
 		{{ Form::open() }}
-		{{ Form::text('num_paragraphs', '', array('size' => '10', 'maxlength' => '2'))  }}
+		{{ Form::text('num_paragraphs', '5', array('size' => '10', 'maxlength' => '2'))  }} (Max: 99)
 		{{ Form::submit('Generate Text!') }}
+		@if ($errors->has('num_paragraphs')) <div id="error"> * {{ $errors->first('num_paragraphs') }} * </div>@endif
 		{{ Form::close() }}
 		
      	@if (isset($paragraphs))

@@ -12,9 +12,10 @@
 		<h2>xkcd Password Generator</h2>
 		
 		{{ Form::open() }}
-		{{ Form::label('num_words', 'How many Words?: '), Form::text('num_words', '3', array('size' => '3', 'maxlength' => '2'))  }}
+		{{ Form::label('num_words', 'How many Words?: '), Form::text('num_words', '5', array('size' => '3', 'maxlength' => '1'))  }}
 		(Max: 9)
-		<br/><br/>
+		@if ($errors->has('num_words')) <div id="error"> * {{ $errors->first('num_words') }} * </div>@endif
+		<br/>
 		<h3>Include...</h3>		
 		<table>
 			<tr>

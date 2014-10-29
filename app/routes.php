@@ -32,7 +32,25 @@ Route::post('/lorem', function()
     $generator = new LoremIpsum\Generator();
     $paragraphs = $generator->getParagraphs($nums);
 	
-     return View::make('lorem')->with('paragraphs', $paragraphs);          
+ 	$validation = Validator::make(
+ 	    array(
+ 	        'num_paragraphs' => Input::get( 'num_paragraphs' ),
+ 	    ),
+ 	    array(
+ 	        'num_paragraphs' => array( 'numeric' ),
+ 	    )
+ 	);
+
+ 	if ( $validation->fails() ) {
+ 	    $errors = $validation->messages();
+
+ 		//echo $errors;
+ 		return View::make('lorem')->withErrors($errors);
+ 	}
+ 	else {	
+	
+     return View::make('lorem')->with('paragraphs', $paragraphs);   
+	 }       
 });
 
 Route::get('/random', function()
@@ -50,6 +68,23 @@ Route::post('/random', function()
 	 $birthdate = Input::get('birthdate');
 	 $profile = Input::get('profile');
      $faker = Faker\Factory::create();	
+	 
+ 	$validation = Validator::make(
+ 	    array(
+ 	        'num_users' => Input::get( 'num_users' ),
+ 	    ),
+ 	    array(
+ 	        'num_users' => array( 'numeric' ),
+ 	    )
+ 	);
+
+ 	if ( $validation->fails() ) {
+ 	    $errors = $validation->messages();
+
+ 		//echo $errors;
+ 		return View::make('random')->withErrors($errors);
+ 	}
+ 	else {
 	 
    		 for ($i = 0 ; $i <= $user; $i++ ) {
 		
@@ -74,7 +109,7 @@ Route::post('/random', function()
 	   	  
  		}	 
 		 return View::make('random')-> with('results',$results);    
- 
+	 }
 	       
 });
 
@@ -83,7 +118,7 @@ Route::get('/xkcdp', function()
 	return View::make('xkcdp');
 });
 
-Route::post('xkcdp',function() {
+Route::post('/xkcdp',function() {
 
  	$words = Input::get('num_words');
  	$random = Input::get('random_num');
@@ -92,6 +127,22 @@ Route::post('xkcdp',function() {
 				   Input::get('separator') );
 	$make_upper = Input::get('make_upper');
 	
+	$validation = Validator::make(
+	    array(
+	        'num_words' => Input::get( 'num_words' ),
+	    ),
+	    array(
+	        'num_words' => array( 'numeric' ),
+	    )
+	);
+	
+	if ( $validation->fails() ) {
+	    $errors = $validation->messages();
+
+		//echo $errors;
+		return View::make('xkcdp')->withErrors($errors);
+	}
+	else {
 	$result_password = '';
 	
 	    $faker = Faker\Factory::create();	
@@ -114,6 +165,7 @@ Route::post('xkcdp',function() {
 		}
 	
 		return View::make('xkcdp')->with('result_password',$result_password);
+	}
 		
 		
 });
