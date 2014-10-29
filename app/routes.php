@@ -51,7 +51,7 @@ Route::post('/random', function()
 	 $profile = Input::get('profile');
      $faker = Faker\Factory::create();	
 	 
-   		 for ($i = 0 ; $i < $user; $i++ ) {
+   		 for ($i = 0 ; $i <= $user; $i++ ) {
 		
 			 $name = $faker->name;
 			 $address = $faker->address;
@@ -76,4 +76,43 @@ Route::post('/random', function()
 		 return View::make('random')-> with('results',$results);    
  
 	       
+});
+
+Route::get('/xkcdp', function()
+{
+	return View::make('xkcdp');
+});
+
+Route::post('xkcdp',function() {
+
+ 	$words = Input::get('num_words');
+ 	$random = Input::get('random_num');
+ 	$special_chars = Input::get('special_chars');
+ 	$separator = ( Input::get('separator') == '' ? '~' : 
+				   Input::get('separator') );
+	$make_upper = Input::get('make_upper');
+	
+	$result_password = '';
+		
+    $faker = Faker\Factory::create();	
+	for ( $i = 0 ; $i < $words ; $i++ ) {
+		
+		$result_password = ( $result_password == '' ? $faker->word: 
+												   $result_password . $separator . $faker->word);				
+
+	}
+	if ($random == 1 ) {
+		$result_password .= rand(0,9);  
+	}
+	
+	if ($special_chars == 1) {
+		$result_password .= chr(rand(33,47));
+	}
+	
+	if ($make_upper == 1) {
+		$result_password = strtoupper($result_password);
+	}
+	
+	return View::make('xkcdp')->with('result_password',$result_password);
+	
 });

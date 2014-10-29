@@ -15,6 +15,9 @@
 		  	elseif ( Request::segment(1) == 'random') {
 		     $rselected = 'rselected';
 		 	}
+		  	elseif ( Request::segment(1) == 'xkcdp') {
+		     $cselected = 'cselected';
+		 	}
 		  	else {
 		     $selected = '';
 		 	}
@@ -23,6 +26,7 @@
           <li class="{{$iselected}}"><a href="/">Home</a></li>
           <li class="{{$lselected}}"> <a href="/lorem">Lorem Ipsum</a></li>
           <li class="{{$rselected}}"><a href="/random">Random Users</a></li>
+          <li class="{{$cselected}}"><a href="/xkcdp">xkcd Password</a></li>
         </ul>
      </div>
 @stop
