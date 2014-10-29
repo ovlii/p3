@@ -16,14 +16,15 @@
 		(Max: 99)
 		<br/><br/>
 		<h3>Include...</h3>		
+		<br/>
 		{{ Form::checkbox('birthdate')}}
-		{{Form::label('Birthdate') }}
+		{{ Form::label('birthdate', '', array('id' => 'birthdate'))  }}
 		<br/>
 		{{ Form::checkbox('address') }}
-		{{Form::label('Address') }}
+		{{ Form::label('address', '', array('id' => 'address'))  }}
 		<br/>
 		{{ Form::checkbox('profile')  }}
-		{{Form::label('Profile') }}
+		{{ Form::label('profile', '', array('id' => 'profile'))  }}
 		<br/><br/>
 				
 		{{ Form::submit('Generate Users!') }}
