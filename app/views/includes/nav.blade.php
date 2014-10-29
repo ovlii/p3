@@ -24,6 +24,5 @@
           <li class="{{$lselected}}"> <a href="/lorem">Lorem Ipsum</a></li>
           <li class="{{$rselected}}"><a href="/random">Random Users</a></li>
         </ul>
-      </div>
-    </div>
+     </div>
 @stop

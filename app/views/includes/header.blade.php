@@ -15,4 +15,5 @@
           <h2>Lorem Ipsum Funny Text and Random User Generator</h2>
         </div>
       </div>
+  </div>
 @stop
