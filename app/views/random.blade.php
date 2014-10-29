@@ -23,7 +23,7 @@
 		{{ Form::label('address')  }}
 		{{ Form::checkbox('address') }}
 		<br/>
-		{{ Form::label('profile'))  }}
+		{{ Form::label('profile')  }}
 		{{ Form::checkbox('profile')  }}
 		<br/><br/>
 				
