@@ -53,7 +53,6 @@
 					@endforeach
 			</table>
      	@endif
-		</hr>
 	  </div>
     </div>
 @stop
